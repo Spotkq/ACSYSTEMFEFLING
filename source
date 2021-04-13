@@ -248,17 +248,10 @@ TextButton.MouseButton1Click:Connect(function()
 
 
 	local args = {
-
-
-		[1] = Vector3.new(game.Workspace.player.RightLowerLeg.CFrame.Position),
-
-
-		[2] = workspace.player.RightLowerLeg,
-
-
+	
+		[1] = Vector3.new(game.Workspace.TextBox.Text.RightLowerLeg.CFrame.Position),
+		[2] = workspace.TextBox.Text.RightLowerLeg,
 	}
-
-
 
 	game:GetService("ReplicatedStorage")["ACS_Engine"].Eventos.Rappel.PlaceEvent:FireServer(unpack(args))
 
