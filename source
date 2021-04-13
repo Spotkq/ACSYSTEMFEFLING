@@ -1,0 +1,384 @@
+-- Gui to Lua
+
+
+-- Version: 3.2
+
+
+
+-- Instances:
+
+
+
+local SynHub = Instance.new("ScreenGui")
+
+
+local flingsystem = Instance.new("Frame")
+
+
+local UICorner = Instance.new("UICorner")
+
+
+local circle = Instance.new("Frame")
+
+
+local UICorner_2 = Instance.new("UICorner")
+
+
+local circle_2 = Instance.new("Frame")
+
+
+local UICorner_3 = Instance.new("UICorner")
+
+
+local circle_3 = Instance.new("Frame")
+
+
+local UICorner_4 = Instance.new("UICorner")
+
+
+local bar = Instance.new("Frame")
+
+
+local UICorner_5 = Instance.new("UICorner")
+
+
+local TextButton = Instance.new("TextButton")
+
+
+local TextLabel = Instance.new("TextLabel")
+
+
+local TextLabel_2 = Instance.new("TextLabel")
+
+
+local TextBox = Instance.new("TextBox")
+
+
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+
+
+--Properties:
+
+
+
+SynHub.Name = "SynHub"
+
+
+SynHub.Parent = game.CoreGui
+
+
+SynHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+
+flingsystem.Name = "flingsystem"
+
+
+flingsystem.Parent = SynHub
+
+
+flingsystem.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+
+
+flingsystem.BorderSizePixel = 0
+
+
+flingsystem.Position = UDim2.new(0.343978047, 0, 0.277039856, 0)
+
+
+flingsystem.Size = UDim2.new(0.311131477, 0, 0.445920318, 0)
+
+
+flingsystem.Active = true
+
+
+flingsystem.Selectable = true
+
+
+flingsystem.Draggable = true
+
+
+
+UICorner.CornerRadius = UDim.new(0, 3)
+
+
+UICorner.Parent = flingsystem
+
+
+
+circle.Name = "circle"
+
+
+circle.Parent = flingsystem
+
+
+circle.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+
+
+circle.Position = UDim2.new(0.0163933933, 0, 0.00884955749, 0)
+
+
+circle.Size = UDim2.new(0.0225409791, 0, 0.0324483775, 0)
+
+
+circle.ZIndex = 2
+
+
+
+UICorner_2.CornerRadius = UDim.new(0, 100)
+
+
+UICorner_2.Parent = circle
+
+
+
+circle_2.Name = "circle"
+
+
+circle_2.Parent = flingsystem
+
+
+circle_2.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+
+
+circle_2.Position = UDim2.new(0.052332852, 0, 0.00884955749, 0)
+
+
+circle_2.Size = UDim2.new(0.0225409791, 0, 0.0324483775, 0)
+
+
+circle_2.ZIndex = 2
+
+
+
+UICorner_3.CornerRadius = UDim.new(0, 100)
+
+
+UICorner_3.Parent = circle_2
+
+
+
+circle_3.Name = "circle"
+
+
+circle_3.Parent = flingsystem
+
+
+circle_3.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+
+
+circle_3.Position = UDim2.new(0.0901638567, 0, 0.00884955749, 0)
+
+
+circle_3.Size = UDim2.new(0.0225409791, 0, 0.0324483775, 0)
+
+
+circle_3.ZIndex = 2
+
+
+
+UICorner_4.CornerRadius = UDim.new(0, 100)
+
+
+UICorner_4.Parent = circle_3
+
+
+
+bar.Name = "bar"
+
+
+bar.Parent = flingsystem
+
+
+bar.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+
+
+bar.Position = UDim2.new(-3.12680051e-08, 0, 0, 0)
+
+
+bar.Size = UDim2.new(0.999999821, 0, 0.0501474924, 0)
+
+
+
+UICorner_5.CornerRadius = UDim.new(0, 3)
+
+
+UICorner_5.Parent = bar
+
+
+
+TextButton.Parent = flingsystem
+
+
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextButton.BackgroundTransparency = 1.000
+
+
+TextButton.Position = UDim2.new(0.369501352, 0, 0.791489303, 0)
+
+
+TextButton.Size = UDim2.new(0.260996997, 0, 0.170212761, 0)
+
+
+TextButton.Font = Enum.Font.SourceSans
+
+
+TextButton.Text = "FLING"
+
+
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextButton.TextScaled = true
+
+
+TextButton.TextSize = 14.000
+
+
+TextButton.TextWrapped = true
+
+
+TextButton.MouseButton1Click:Connect(function()
+
+
+	local player = TextBox.Text
+
+
+	local args = {
+
+
+		[1] = Vector3.new(game.Workspace.player.RightLowerLeg.CFrame.Position),
+
+
+		[2] = workspace.player.RightLowerLeg,
+
+
+	}
+
+
+
+	game:GetService("ReplicatedStorage")["ACS_Engine"].Eventos.Rappel.PlaceEvent:FireServer(unpack(args))
+
+
+end)
+
+
+
+TextLabel.Parent = flingsystem
+
+
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextLabel.BackgroundTransparency = 1.000
+
+
+TextLabel.Position = UDim2.new(0.0146627529, 0, 0.0382978693, 0)
+
+
+TextLabel.Size = UDim2.new(0.369501352, 0, 0.136170208, 0)
+
+
+TextLabel.Font = Enum.Font.SourceSans
+
+
+TextLabel.Text = "FLING SYSTEM ACS"
+
+
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextLabel.TextScaled = true
+
+
+TextLabel.TextSize = 14.000
+
+
+TextLabel.TextWrapped = true
+
+
+
+TextLabel_2.Parent = flingsystem
+
+
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextLabel_2.BackgroundTransparency = 1.000
+
+
+TextLabel_2.Position = UDim2.new(0.0146627529, 0, 0.17446807, 0)
+
+
+TextLabel_2.Size = UDim2.new(0.164222822, 0, 0.0765957385, 0)
+
+
+TextLabel_2.Font = Enum.Font.SourceSans
+
+
+TextLabel_2.Text = "SynHub"
+
+
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextLabel_2.TextScaled = true
+
+
+TextLabel_2.TextSize = 14.000
+
+
+TextLabel_2.TextWrapped = true
+
+
+
+TextBox.Parent = flingsystem
+
+
+TextBox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+
+
+TextBox.BorderSizePixel = 0
+
+
+TextBox.Position = UDim2.new(0.208211094, 0, 0.391489357, 0)
+
+
+TextBox.Size = UDim2.new(0.586510122, 0, 0.212765947, 0)
+
+
+TextBox.Font = Enum.Font.SourceSans
+
+
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+
+
+TextBox.PlaceholderText = "USERNAME"
+
+
+TextBox.Text = ""
+
+
+TextBox.TextColor3 = Color3.fromRGB(85, 255, 255)
+
+
+TextBox.TextScaled = true
+
+
+TextBox.TextSize = 14.000
+
+
+TextBox.TextWrapped = true
+
+
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+UIAspectRatioConstraint.Parent = flingsystem
+
+
+UIAspectRatioConstraint.AspectRatio = 1.451
