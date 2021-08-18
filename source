@@ -275,7 +275,7 @@ TextLabel.Size = UDim2.new(0.369501352, 0, 0.136170208, 0)
 TextLabel.Font = Enum.Font.SourceSans
 
 
-TextLabel.Text = "FLING SYSTEM ACS"
+TextLabel.Text = "SISTEMA FLING S-086"
 
 
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -309,7 +309,7 @@ TextLabel_2.Size = UDim2.new(0.164222822, 0, 0.0765957385, 0)
 TextLabel_2.Font = Enum.Font.SourceSans
 
 
-TextLabel_2.Text = "SynHub by dogshit#9149"
+TextLabel_2.Text = "SynHub por Beluga Fan Promedio#0001"
 
 
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
